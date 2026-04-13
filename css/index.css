@@ -270,6 +270,7 @@ header .mobile i {
   border-radius: 2rem;
   background-color: #fff;
   overflow: hidden;
+  cursor: pointer;
 }
 #visual .but .dot li .bar {
   width: 100%;
@@ -678,10 +679,7 @@ header .mobile i {
 
 #container .con03 {
   /* border: 1px solid red; */
-  width: 100%;
-  max-width: 1400px;
   margin: 5rem auto 10rem;
-  display: flex;
 }
 /* left */
 #container .con03 .left {
@@ -794,6 +792,9 @@ header .mobile i {
   background-color: #4068b2;
   border-radius: 0 0 30rem 0;
   padding: 5rem 0;
+  opacity: 0;
+  transition: 1s;
+  transition-duration: 1s;
 }
 
 #container .con04 h2 {
@@ -827,6 +828,7 @@ header .mobile i {
   /* border: 1px solid #666; */
   background: no-repeat center / cover;
   transition: 1s;
+  transition-duration: 1s;
   overflow: hidden;
   /* filter: grayscale(0.5); */
 }
@@ -842,7 +844,6 @@ header .mobile i {
 
 #container .con04 .report li:hover {
   width: 80%;
-  background-size: 200%;
 }
 
 /* con04 narrow */
@@ -896,22 +897,22 @@ header .mobile i {
 }
 
 #container .con04 .report li:first-child .narrow .btn {
-  left: 5rem;
+  left: 5%;
   border-radius: 0 2rem 2rem 0;
 }
 
 #container .con04 .report li:last-child .narrow .btn {
-  right: 5rem;
+  right: 5%;
   border-radius: 2rem 0 0 2rem;
 }
 
 /* container -> con05 */
 
 #container .con05 ul {
-  padding: 10rem;
+  padding: 10rem 0;
   display: flex;
-  gap: 10rem;
-  font-size: 2.5rem;
+  gap: 8rem;
+  font-size: 2rem;
   justify-content: center;
   align-items: center;
   height: 100%;
@@ -922,6 +923,104 @@ header .mobile i {
   color: #4068b2;
 }
 
+/* footer */
+footer {
+  color: #fff;
+  background-color: #4068b2;
+  border-radius: 5rem 5rem 0 0;
+  padding: 0 2rem;
+}
+footer .footer_wrap {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 3rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+/* footer_left */
+footer .footer_wrap .left .top {
+  display: flex;
+  gap: 4rem;
+  margin-bottom: 5rem;
+}
+footer .footer_wrap .left .top h1 {
+  transition: 0.5s;
+}
+footer .footer_wrap .left .top h1:hover {
+  transform: scale(1.1);
+}
+footer .footer_wrap .left .top > ul {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+footer .footer_wrap .left .top h1 {
+  width: 8rem;
+}
+footer .footer_wrap .left .top > ul li {
+  transition: 0.5s;
+  position: relative;
+  border-radius: 2rem 0 0 2rem;
+  overflow: hidden;
+}
+
+footer .footer_wrap .left .top > ul li::before {
+  content: "";
+  background: linear-gradient(90deg, #fbac18, rgba(255, 255, 255, 0));
+
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+  transition: 1s;
+}
+
+footer .footer_wrap .left .top > ul li:hover::before {
+  transform: translateX(0);
+}
+
+footer .footer_wrap .left .bottom .sns {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  gap: 1.5rem;
+}
+footer .footer_wrap .left .bottom .sns li {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+}
+footer .footer_wrap .left .bottom .sns li:hover {
+  color: #fbac18;
+  /* border: 1px solid #fbac18; */
+  box-shadow: 0 1rem 0 #fbac18;
+  font-size: 1.3rem;
+  background-color: #fff;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 2rem 2rem 0 0;
+}
+footer .footer_wrap .right {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+footer .footer_wrap .right li span {
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+footer .footer_wrap .right li.copy {
+  font-size: 0.9rem;
+  color: #ccc;
+  font-weight: lighter;
+  margin-top: 2rem;
+}
 /* 
 [ 미 ]===============================================
 [ 디 ]===============================================
@@ -941,6 +1040,30 @@ header .mobile i {
 
   header nav.side {
     display: none;
+  }
+
+  /* container -> con03 */
+
+  #container .con03 {
+    /* border: 1px solid red; */
+    width: 100%;
+    max-width: 1400px;
+    display: flex;
+  }
+  #container .con03 .right {
+    margin-right: 2rem;
+  }
+  #container .con03 .right ul li .t_wrap h4 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #fbac18;
+
+    padding-left: 1rem;
+  }
+  #container .con03 .right ul li .t_wrap h4 span {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #fbac18;
   }
 }
 
@@ -1011,6 +1134,43 @@ header .mobile i {
   #container .con01 .pic .pic_s li {
     width: calc((400px / 2) - 0.5rem);
     height: calc((400px / 2) - 0.5rem);
+  }
+
+  /* container -> con03 */
+
+  #container .con03 {
+    /* border: 1px solid red; */
+    display: flex;
+    width: 95%;
+  }
+
+  #container .con03 .right ul li {
+    display: flex;
+  }
+  #container .con03 .right ul li .t_wrap h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #fbac18;
+
+    padding-left: 1rem;
+  }
+  #container .con03 .right ul li .t_wrap h4 span {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #fbac18;
+  }
+
+  /* container -> con05 */
+
+  #container .con05 ul {
+    gap: 5rem;
+    font-size: 2rem;
+  }
+
+  /* footer */
+  /* footer_left */
+  footer .footer_wrap .left .top {
+    flex-direction: column;
   }
 }
 
@@ -1218,6 +1378,72 @@ header .mobile i {
   }
   #container .con01 .pic .pic_s li.on {
     box-shadow: 0 0 30px #fbac18;
+  }
+
+  /* container -> con03 */
+
+  #container .con03 {
+    margin: 5rem auto 15rem;
+    display: block;
+    /* border: 1px solid red; */
+    width: 90%;
+  }
+  #container .con03 .left {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid red;
+  }
+  #container .con03 .left .btn {
+    height: 50px;
+  }
+  #container .con03 .right {
+    width: 100%;
+  }
+  #container .con03 .right ul li {
+    /* display: block; */
+  }
+  #container .con03 .right ul li .t_wrap {
+    width: 90%;
+  }
+  /* container -> con04 */
+  #container .con04 .report li .narrow h5 {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+  }
+  #container .con04 .report li .narrow .txt {
+    display: none;
+    transition: 0.5s;
+  }
+  #container .con04 .report li:hover .txt {
+    display: block;
+    font-size: 0.8rem;
+  }
+  #container .con04 .report li .narrow .btn {
+    gap: 0.5rem;
+    font-size: 1rem;
+    width: 10rem;
+  }
+  /* container -> con05 */
+
+  #container .con05 ul {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+  /* footer */
+
+  footer .footer_wrap {
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  /* footer_left */
+  footer .footer_wrap .left .top {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 3rem;
   }
 }
 

@@ -172,12 +172,12 @@ $(function () {
   });
 
   // container -> con1
-
+  let con01 = $(".con01").offset().top - 700;
   $(window).on("scroll", function () {
-    con1 = $(this).scrollTop();
+    let scroll = $(this).scrollTop();
     // console.log(con1);
 
-    if (con1 >= 300) {
+    if (scroll >= con01) {
       txt_ani_on();
       $("#container .con01 .pic")
         .stop()
@@ -303,60 +303,65 @@ $(function () {
 
     if (scroll >= con04) {
       txt4_ani_on();
+      $("#container .con04").stop().css({ opacity: "1" });
       $("#container .con04 .report").stop().css({ gap: "0", opacity: "1" });
     } else {
       txt4_ani_off();
+      $("#container .con04").stop().css({ opacity: "0" });
       $("#container .con04 .report").stop().css({ gap: "10rem", opacity: "0" });
     }
   });
 
   // container -> con05
-  let con05 = $(".con05").offset().top - 600; // 위치값 (살짝 위에서 시작하게 -600)
+  let con05 = $(".con05").offset().top - 700; // 위치값 (살짝 위에서 시작하게 -600)
   let timer; // 타이머를 담을 변수
+  let isAni = false;
 
   $(window).on("scroll", function () {
     let scroll = $(window).scrollTop();
 
     if (scroll >= con05) {
-      // [추가] 타이머가 이미 돌고 있다면 중복 방지를 위해 먼저 정지시킨다!
-      clearInterval(timer);
+      // [수정] 조건 추가: 스크롤 위치가 맞고 + 아직 애니메이션이 실행 안 됐을 때만!
+      if (isAni == false) {
+        isAni = true; // 실행 시작했으니 true로 변경!
 
-      let num1 = 0;
-      let num2 = 0;
-      let num3 = 0;
+        let num1 = 0;
+        let num2 = 0;
+        let num3 = 0;
 
-      let end1 = 1234;
-      let end2 = 567;
-      let end3 = 8910;
+        let end1 = 1234;
+        let end2 = 567;
+        let end3 = 8910;
 
-      let count = 0; // [오타수정] conunt -> count
+        let count = 0;
 
-      timer = setInterval(function () {
-        num1 += 21;
-        num2 += 11;
-        num3 += 161;
+        timer = setInterval(function () {
+          num1 += 21;
+          num2 += 11;
+          num3 += 161;
 
-        // [추가] 숫자가 목표치를 넘지 않게 하는 안전장치
-        if (num1 > end1) num1 = end1;
-        if (num2 > end2) num2 = end2;
-        if (num3 > end3) num3 = end3;
+          if (num1 > end1) num1 = end1;
+          if (num2 > end2) num2 = end2;
+          if (num3 > end3) num3 = end3;
 
-        $(".count1").text(num1);
-        $(".count2").text(num2);
-        $(".count3").text(num3);
+          $(".count1").text(num1);
+          $(".count2").text(num2);
+          $(".count3").text(num3);
 
-        count++; // [오타수정] conunt -> count
+          count++;
 
-        if (count >= 100) {
-          $(".count1").text(end1);
-          $(".count2").text(end2);
-          $(".count3").text(end3);
-
-          clearInterval(timer);
-        }
-      }, 40);
+          if (count >= 100) {
+            $(".count1").text(end1);
+            $(".count2").text(end2);
+            $(".count3").text(end3);
+            clearInterval(timer);
+          }
+        }, 40);
+      }
     } else {
-      // [추가] 섹션보다 위로 올라갔을 때 숫자를 0으로 초기화 (되돌리기 기능)
+      // 섹션 위로 올라갔을 때 초기화하고 싶다면 여기서 다시 false로!
+      // 만약 딱 한 번만 실행되길 원하면 아래 코드는 지워버려도 돼.
+      isAni = false;
       clearInterval(timer);
       $(".count1").text(0);
       $(".count2").text(0);
