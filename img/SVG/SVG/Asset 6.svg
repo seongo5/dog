@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 346.16 176.69">
+  <defs>
+    <style>
+      .cls-1 {
+        font-family: AcuminConcept-Bold, 'Acumin Variable Concept';
+        font-size: 41px;
+        font-variation-settings: 'wght' 700, 'wdth' 100, 'slnt' 0;
+        font-weight: 700;
+      }
+
+      .cls-2, .cls-3, .cls-4 {
+        fill: #fbac18;
+      }
+
+      .cls-3 {
+        letter-spacing: 0em;
+      }
+
+      .cls-5 {
+        letter-spacing: 0em;
+      }
+
+      .cls-5, .cls-6, .cls-7, .cls-8, .cls-9, .cls-10 {
+        fill: #4068b2;
+      }
+
+      .cls-7 {
+        letter-spacing: 0em;
+      }
+
+      .cls-11 {
+        fill: #fff;
+      }
+
+      .cls-11, .cls-9, .cls-4 {
+        stroke-width: 0px;
+      }
+
+      .cls-8 {
+        letter-spacing: 0em;
+      }
+
+      .cls-10 {
+        letter-spacing: 0em;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <path class="cls-9" d="m173.08,0h-56.69v113.39h56.69c31.31,0,56.69-25.38,56.69-56.69S204.39,0,173.08,0Z"/>
+    <g>
+      <path class="cls-4" d="m194.34,56.69h-7.09v-14.17c0-7.83-6.35-14.17-14.17-14.17h0s0,0,0,0c0-7.83-6.35-14.17-14.17-14.17v14.17c0-7.83-6.35-14.17-14.17-14.17h0v70.87h28.35c13.23,0,24.34-9.06,27.47-21.32-3.5-.43-6.21-3.41-6.21-7.03Z"/>
+      <path class="cls-11" d="m200.55,63.72c.57-2.25.88-4.6.88-7.03h0s-7.09,0-7.09,0c0,3.62,2.71,6.59,6.21,7.03Z"/>
+    </g>
+    <circle class="cls-9" cx="56.69" cy="56.69" r="56.69"/>
+    <circle class="cls-4" cx="56.69" cy="56.69" r="28.35"/>
+    <path class="cls-9" d="m289.47,0h-56.69v113.39h56.69c31.31,0,56.69-25.38,56.69-56.69S320.78,0,289.47,0Zm0,85.04h-28.35V28.35h28.35c15.63,0,28.35,12.72,28.35,28.35s-12.72,28.35-28.35,28.35Z"/>
+    <polygon class="cls-4" points="289.47 99.21 261.12 85.04 261.12 28.35 289.47 42.52 289.47 99.21"/>
+    <circle class="cls-11" cx="159.69" cy="47.08" r="5.7"/>
+    <circle class="cls-11" cx="176.12" cy="47.08" r="5.7"/>
+    <circle class="cls-9" cx="177.95" cy="47.08" r="3.87"/>
+    <circle class="cls-9" cx="161.51" cy="47.08" r="3.87"/>
+    <text class="cls-1" transform="translate(0 165.95)"><tspan class="cls-2" x="0" y="0">O</tspan><tspan class="cls-10" x="31.37" y="0">P</tspan><tspan class="cls-8" x="57.73" y="0">E</tspan><tspan class="cls-6" x="82.95" y="0">N </tspan><tspan class="cls-3" x="123.83" y="0">D</tspan><tspan class="cls-7" x="154.01" y="0">OG </tspan><tspan class="cls-2" x="226.1" y="0">D</tspan><tspan class="cls-5" x="256.28" y="0">OOR</tspan></text>
+  </g>
+</svg>
