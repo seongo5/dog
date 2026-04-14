@@ -1,5 +1,6 @@
 $(function () {
   //
+  let w = $(window).width();
   // con1_txt
   function txt_ani_on() {
     $(".con01 h2").stop().css({ transform: "translateX(0)", opacity: "1" });
@@ -279,7 +280,7 @@ $(function () {
     }
 
     //
-    let w = $(window).width();
+
     if (w < 840) {
       if (scroll >= con03 + 300) {
         $("#container .con03 .right ul li:nth-child(odd)")
@@ -337,19 +338,36 @@ $(function () {
 
   // container -> con04
 
-  let con04 = $(".con04").offset().top - 700;
   $(window).on("scroll", function () {
     let scroll = $(this).scrollTop();
     // console.log(con4);
 
-    if (scroll >= con04) {
-      txt4_ani_on();
-      $("#container .con04").stop().css({ opacity: "1" });
-      $("#container .con04 .report").stop().css({ gap: "0", opacity: "1" });
+    if (w < 400) {
+      let con04 = $(".con04").offset().top - 100;
+      if (scroll >= con04) {
+        txt4_ani_on();
+        $("#container .con04").stop().css({ opacity: "1" });
+        $("#container .con04 .report").stop().css({ gap: "0", opacity: "1" });
+      } else {
+        txt4_ani_off();
+        $("#container .con04").stop().css({ opacity: "0" });
+        $("#container .con04 .report")
+          .stop()
+          .css({ gap: "10rem", opacity: "0" });
+      }
     } else {
-      txt4_ani_off();
-      $("#container .con04").stop().css({ opacity: "0" });
-      $("#container .con04 .report").stop().css({ gap: "10rem", opacity: "0" });
+      let con04 = $(".con04").offset().top - 700;
+      if (scroll >= con04) {
+        txt4_ani_on();
+        $("#container .con04").stop().css({ opacity: "1" });
+        $("#container .con04 .report").stop().css({ gap: "0", opacity: "1" });
+      } else {
+        txt4_ani_off();
+        $("#container .con04").stop().css({ opacity: "0" });
+        $("#container .con04 .report")
+          .stop()
+          .css({ gap: "10rem", opacity: "0" });
+      }
     }
   });
 
