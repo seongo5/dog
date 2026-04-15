@@ -190,10 +190,8 @@ header .mobile i {
   background-image: url(../img/system1.jfif);
 }
 #visual .bg h3 {
-  font-size: 3rem;
   position: absolute;
   bottom: 30%;
-  left: 5rem;
   color: #fff;
   transform: translateX(-5rem);
   opacity: 0;
@@ -1013,6 +1011,13 @@ footer .footer_wrap .right li.copy {
     display: none;
   }
 
+  /* visual */
+
+  #visual .bg h3 {
+    font-size: 3rem;
+    left: 5rem;
+  }
+
   /* container -> con03 */
 
   #container .con03 {
@@ -1138,6 +1143,13 @@ footer .footer_wrap .right li.copy {
   }
   header .mobile {
     display: none;
+  }
+
+  /* visual */
+
+  #visual .bg h3 {
+    font-size: 3rem;
+    left: 5rem;
   }
 
   /* container -> con01 */
@@ -1277,10 +1289,10 @@ footer .footer_wrap .right li.copy {
   /* dona */
   header .dona {
     position: fixed;
-    right: 3rem;
-    bottom: 3rem;
-    width: 5rem;
-    height: 5rem;
+    right: 2rem;
+    bottom: 2rem;
+    width: 4rem;
+    height: 4rem;
     border-radius: 0 8rem 8rem 0;
   }
   header .dona a {
@@ -1362,8 +1374,10 @@ footer .footer_wrap .right li.copy {
   }
 
   /* visual */
+
   #visual .bg h3 {
-    font-size: 2rem;
+    font-size: 1.7rem;
+    left: 3rem;
   }
 
   #visual .bg .detail {
@@ -1603,6 +1617,12 @@ footer .footer_wrap .right li.copy {
   .p02 {
     font-size: 1rem !important;
   }
+
+  #visual .bg h3 {
+    font-size: 1.5rem;
+    left: 2rem;
+  }
+
   /* large */
   #container .con01 .pic .pic_l {
     width: 300px;
