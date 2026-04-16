@@ -179,12 +179,15 @@ $(function () {
     let scroll = $(this).scrollTop();
     // console.log(con1);
 
+    let i = 0;
+    let s1 = $(".pic_s li").index();
+
     if (scroll >= con01) {
       txt_ani_on();
       $("#container .con01 .pic")
         .stop()
         .css({ transform: "translateY(0)", opacity: "1" });
-      $("#container .con01 .pic .pic_l li .info")
+      $("#container .con01 .pic .pic_l li .info ")
         .eq(i)
         .stop()
         .css({ transform: "translateY(0)" });
@@ -198,6 +201,7 @@ $(function () {
         .stop()
         .css({ transform: "translateY(10rem)", opacity: "0" });
       $("#container .con01 .pic .pic_l li .info")
+        .eq(i)
         .stop()
         .css({ transform: "translateY(100%)" });
       $("#container .con01 .pic .pic_l li img").css({
@@ -208,7 +212,6 @@ $(function () {
   });
 
   $(".pic_s li").on("click", function () {
-    let i = 0;
     let s = $(this).index();
     $(".pic_s li").removeClass("on");
     $(this).eq(i).addClass("on");
