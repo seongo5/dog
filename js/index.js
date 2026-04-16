@@ -183,11 +183,25 @@ $(function () {
       $("#container .con01 .pic")
         .stop()
         .css({ transform: "translateY(0)", opacity: "1" });
+      $("#container .con01 .pic .pic_l li .info")
+        .stop()
+        .css({ transform: "translateY(0)" });
+      $("#container .con01 .pic .pic_l li img").css({
+        transform: "scale(1.1)",
+        filter: "brightness(1.1)",
+      });
     } else {
       txt_ani_off();
       $("#container .con01 .pic")
         .stop()
         .css({ transform: "translateY(10rem)", opacity: "0" });
+      $("#container .con01 .pic .pic_l li .info")
+        .stop()
+        .css({ transform: "translateY(100%)" });
+      $("#container .con01 .pic .pic_l li img").css({
+        transform: "scale(0.9)",
+        filter: "grayscale(0.3)",
+      });
     }
   });
 
@@ -198,10 +212,10 @@ $(function () {
     $(this).eq(i).addClass("on");
     $(".pic_l li").hide();
     $(".pic_l li").eq(s).fadeIn();
-  });
-
-  $(".pic_l li").on("mouseenter", function () {
-    $(this).find(".go").css({ "display:": "block" });
+    $(".pic_l li .info").css({
+      transform: "translateY(100%)",
+    });
+    $(".pic_l li .info").eq(s).stop().css({ transform: "translateY(0)" });
   });
 
   // container -> con02
@@ -421,6 +435,12 @@ $(function () {
       $(".count2").text(0);
       $(".count3").text(0);
     }
+  });
+
+  //
+
+  $(window).on("load", function () {
+    $(window).trigger("scroll");
   });
 });
 
