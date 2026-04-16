@@ -376,7 +376,6 @@ header .mobile i {
   /* border: 1px solid red; */
   transform: translateY(100%);
   transition: 0.5s;
-  transition-delay: 0.5s;
 }
 /* #container .con01 .pic .pic_l li:hover .info {
   transform: translateY(0);
@@ -406,7 +405,7 @@ header .mobile i {
   height: 100%;
   object-fit: cover;
 
-  filter: grayscale(0.3);
+  filter: grayscale(1);
   transition: 2s;
   transition-delay: 3s;
 }

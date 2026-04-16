@@ -173,8 +173,9 @@ $(function () {
   });
 
   // container -> con1
-  let con01 = $(".con01").offset().top - 700;
+
   $(window).on("scroll", function () {
+    let con01 = $(".con01").offset().top - 700;
     let scroll = $(this).scrollTop();
     // console.log(con1);
 
@@ -184,6 +185,7 @@ $(function () {
         .stop()
         .css({ transform: "translateY(0)", opacity: "1" });
       $("#container .con01 .pic .pic_l li .info")
+        .eq(i)
         .stop()
         .css({ transform: "translateY(0)" });
       $("#container .con01 .pic .pic_l li img").css({
@@ -199,8 +201,8 @@ $(function () {
         .stop()
         .css({ transform: "translateY(100%)" });
       $("#container .con01 .pic .pic_l li img").css({
-        transform: "scale(0.9)",
-        filter: "grayscale(0.3)",
+        transform: "scale(1)",
+        filter: "grayscale(0.9)",
       });
     }
   });
@@ -212,6 +214,7 @@ $(function () {
     $(this).eq(i).addClass("on");
     $(".pic_l li").hide();
     $(".pic_l li").eq(s).fadeIn();
+
     $(".pic_l li .info").css({
       transform: "translateY(100%)",
     });
@@ -253,9 +256,8 @@ $(function () {
     start2();
   });
 
-  let con02 = $(".con02").offset().top - 700;
-
   $(window).on("scroll", function () {
+    let con02 = $(".con02").offset().top - 700;
     let scroll = $(this).scrollTop();
     // console.log(con2);
     if (scroll >= con02) {
